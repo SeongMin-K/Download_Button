@@ -13,6 +13,7 @@
 		3E29E301279008D500838701 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E29E2FF279008D500838701 /* Main.storyboard */; };
 		3E29E303279008D600838701 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E29E302279008D600838701 /* Assets.xcassets */; };
 		3E29E306279008D600838701 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E29E304279008D600838701 /* LaunchScreen.storyboard */; };
+		6949D4F8EABF1B6A0ECC54C0 /* Pods_Download_Button.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7D98374AAA32594A33C128B /* Pods_Download_Button.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		3E29E302279008D600838701 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E29E305279008D600838701 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E29E307279008D600838701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87AED697E8538CA37442A830 /* Pods-Download_Button.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Download_Button.debug.xcconfig"; path = "Target Support Files/Pods-Download_Button/Pods-Download_Button.debug.xcconfig"; sourceTree = "<group>"; };
+		ADEF5A09E087018924370F1D /* Pods-Download_Button.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Download_Button.release.xcconfig"; path = "Target Support Files/Pods-Download_Button/Pods-Download_Button.release.xcconfig"; sourceTree = "<group>"; };
+		B7D98374AAA32594A33C128B /* Pods_Download_Button.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Download_Button.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6949D4F8EABF1B6A0ECC54C0 /* Pods_Download_Button.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				3E29E2F8279008D500838701 /* Download_Button */,
 				3E29E2F7279008D500838701 /* Products */,
+				FD5DFE42747DEA77357DED89 /* Pods */,
+				4CF65F6BCA7AA914FAE8D562 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = Download_Button;
 			sourceTree = "<group>";
 		};
+		4CF65F6BCA7AA914FAE8D562 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7D98374AAA32594A33C128B /* Pods_Download_Button.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD5DFE42747DEA77357DED89 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87AED697E8538CA37442A830 /* Pods-Download_Button.debug.xcconfig */,
+				ADEF5A09E087018924370F1D /* Pods-Download_Button.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E29E30A279008D600838701 /* Build configuration list for PBXNativeTarget "Download_Button" */;
 			buildPhases = (
+				654EECE071A371735F0CBD82 /* [CP] Check Pods Manifest.lock */,
 				3E29E2F2279008D500838701 /* Sources */,
 				3E29E2F3279008D500838701 /* Frameworks */,
 				3E29E2F4279008D500838701 /* Resources */,
+				8CEB30789160094F308B3259 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		654EECE071A371735F0CBD82 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Download_Button-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CEB30789160094F308B3259 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Download_Button/Pods-Download_Button-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Download_Button/Pods-Download_Button-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Download_Button/Pods-Download_Button-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3E29E2F2279008D500838701 /* Sources */ = {
@@ -284,6 +353,7 @@
 		};
 		3E29E30B279008D600838701 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87AED697E8538CA37442A830 /* Pods-Download_Button.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +382,7 @@
 		};
 		3E29E30C279008D600838701 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADEF5A09E087018924370F1D /* Pods-Download_Button.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
